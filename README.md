@@ -39,7 +39,6 @@ This project is a backend application built with Spring Boot that provides secur
 ---
 
 ## 🧪 How to Run
-## 🧪 How to Run
 
 ```bash
 git clone https://github.com/alpsahan/springboot-jwt-auth.git
