@@ -26,6 +26,24 @@
 1. **Clone the repository:**
    ```bash
    git clone [https://github.com/alpsahan/springboot-jwt-auth.git](https://github.com/alpsahan/springboot-jwt-auth.git)
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd springboot-jwt-auth
+   ```
+3. Configure your database:
+Update your database configurations in the application.properties file.
+
+4. Run the application:
+   ```bash
+   ./mvnw spring-boot:run
+   ```
+5. Access API Documentation:
+Once the application is running, you can explore the endpoints via Swagger UI:
+http://localhost:8080/swagger-ui/index.html
+
+
+
 
    
    
