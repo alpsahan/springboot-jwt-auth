@@ -41,5 +41,19 @@ This project is a backend application built with Spring Boot that provides secur
 ## 🧪 How to Run
 
 1. Clone the repository:
-```bash
 git clone https://github.com/alpsahan/springboot-jwt-auth.git
+
+2.Navigate to the project directory
+cd springboot-jwt-auth
+
+3. Configure your database
+Update the application.properties file with your database credentials.
+
+4. Run the application
+./mvnw spring-boot:run
+
+
+📄 Swagger UI
+After running the application, you can access the API documentation at:
+http://localhost:8080/swagger-ui/index.html
+
