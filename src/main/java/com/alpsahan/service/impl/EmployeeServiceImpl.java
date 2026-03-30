@@ -1,0 +1,43 @@
+package com.alpsahan.service.impl;
+
+import java.util.Optional;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.alpsahan.dto.DtoDepartment;
+import com.alpsahan.dto.DtoEmployee;
+import com.alpsahan.model.Department;
+import com.alpsahan.model.Employee;
+import com.alpsahan.repository.EmployeeRepository;
+import com.alpsahan.service.IEmployeeService;
+
+
+@Service
+public class EmployeeServiceImpl implements IEmployeeService {
+	
+	@Autowired
+	private EmployeeRepository employeeRepository;
+
+	@Override
+	public DtoEmployee findEmployeeById(Long id) {
+		DtoEmployee dtoEmployee = new DtoEmployee();
+		DtoDepartment dtoDepartment = new DtoDepartment();
+		Optional<Employee> optional = employeeRepository.findById(id);
+		if(optional.isEmpty()) {
+			//Exception
+			return null;
+		}
+		Employee employee = optional.get();
+		Department department = employee.getDepartment();
+		BeanUtils.copyProperties(employee, dtoEmployee);
+		BeanUtils.copyProperties(department, dtoDepartment);
+		
+		dtoEmployee.setDepartment(dtoDepartment);
+		return dtoEmployee;
+	}
+	
+	
+
+}
