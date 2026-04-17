@@ -17,7 +17,7 @@ public class SwaggerConfig {
 		return new OpenAPI()
 				.info(new Info()
 				.title("Swagger")
-				.description("Swagger kullanmayı öğreniyorum"))
+				.description("Swagger documentation"))
 				.addSecurityItem(new SecurityRequirement().addList("bearerAuth"))
 				.components(new Components().addSecuritySchemes("bearerAuth", 
 						new SecurityScheme()
