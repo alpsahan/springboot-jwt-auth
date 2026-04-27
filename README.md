@@ -53,9 +53,17 @@ cd springboot-jwt-auth
 3. Configure your database in application.properties
    
 4. Run the application:
+   
+For Windows (CMD / PowerShell)
+```bash
+.\mvnw.cmd spring-boot:run
+```
+
+For macOS / Linux
 ```bash
 ./mvnw spring-boot:run
 ```
+
 
 📄 Swagger UI
 After running the application, you can access API documentation via:
